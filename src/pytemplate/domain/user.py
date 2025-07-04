@@ -13,3 +13,7 @@ new_awesome_list.remove(5)
 new_awesome_list.pop(1)
 new_tuple: tuple[int, ...] = (3, 4, 5, 6, 7)
 new_awesome_tuple: tuple[int, ...] = deepcopy(new_tuple)
+temp_list = list(new_awesome_tuple)
+index = temp_list.index(4)
+temp_list[index] = 8
+new_awesome_tuple = tuple(temp_list)

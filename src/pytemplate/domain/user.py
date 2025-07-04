@@ -4,3 +4,4 @@ name: str = "Rashad"
 surname: str = "Musayev"
 ID: str = name + " " + surname
 last_letter: str = name[-1]
+surname_slice: str = surname[1:3]

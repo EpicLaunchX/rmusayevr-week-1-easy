@@ -1,4 +1,4 @@
-from src.pytemplate.domain.user import age, height, ID, last_letter, name, new_awesome_list, new_list, surname, surname_slice
+from src.pytemplate.domain.user import age, height, ID, last_letter, name, new_awesome_list, new_list, new_tuple, surname, surname_slice
 
 
 def test_age():
@@ -40,3 +40,9 @@ def test_new_awesome_list_type():
     assert isinstance(new_awesome_list, list)
     assert all(isinstance(i, int) for i in new_awesome_list)
     assert new_awesome_list == [3, 6, 7]
+
+
+def test_new_tuple_type():
+    assert isinstance(new_tuple, tuple)
+    assert all(isinstance(i, int) for i in new_tuple)
+    assert new_tuple == (3, 4, 5, 6, 7)

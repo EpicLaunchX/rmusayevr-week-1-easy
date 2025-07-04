@@ -1,4 +1,4 @@
-from src.pytemplate.domain.user import age, height, ID, name, surname
+from src.pytemplate.domain.user import age, height, ID, last_letter, name, surname
 
 
 def test_age():
@@ -18,3 +18,8 @@ def test_identity():
     assert name == "Rashad"
     assert surname == "Musayev"
     assert ID == name + " " + surname
+
+
+def test_last_letter():
+    assert isinstance(last_letter, str)
+    assert last_letter == name[-1]

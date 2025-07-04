@@ -1,4 +1,4 @@
-from src.pytemplate.domain.user import age, height, ID, last_letter, name, surname, surname_slice
+from src.pytemplate.domain.user import age, height, ID, last_letter, name, new_list, surname, surname_slice
 
 
 def test_age():
@@ -28,3 +28,9 @@ def test_last_letter():
 def test_surname_slice():
     assert isinstance(surname_slice, str)
     assert surname_slice == surname[1:3]
+
+
+def test_new_list_type():
+    assert isinstance(new_list, list)
+    assert all(isinstance(i, int) for i in new_list)
+    assert new_list == [3, 4, 5, 6, 7]
